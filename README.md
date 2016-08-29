@@ -1,2 +1,2 @@
 # guibonacci
-Tiny Fibonacci sequence calculator written in C#
+tiny fibonacci sequence calculator written in C#.
