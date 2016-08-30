@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace fibonacci
@@ -10,14 +11,14 @@ namespace fibonacci
             InitializeComponent();
         }
 
-        public static long Fibonacci(long n)
+        public static BigInteger Fibonacci(long n)
         {
-            long a = 0;
-            long b = 1;
+            BigInteger a = 0;
+            BigInteger b = 1;
             
             for(long i = 0; i < n; i++)
             {
-                long temp = a;
+                BigInteger temp = a;
                 a = b;
                 b = temp + b;
             }
@@ -29,7 +30,7 @@ namespace fibonacci
         {
             listBox1.Items.Clear();
 
-            for (long i = 0; i < Convert.ToInt64(textBox1.Text); i++)
+            for (int i = 0; i < Convert.ToInt64(textBox1.Text); i++)
                 listBox1.Items.Add(Fibonacci(i));
         }
     }
