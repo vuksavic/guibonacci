@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
 
 namespace fibonacci
@@ -17,18 +10,16 @@ namespace fibonacci
             InitializeComponent();
         }
 
-        public static int Fibonacci(int n)
+        public static long Fibonacci(long n)
         {
-            int a = 0;
-            int b = 1;
+            long a = 0;
+            long b = 1;
             
-            for(int i = 0; i < n; i++)
+            for(long i = 0; i < n; i++)
             {
-                int temp = a;
+                long temp = a;
                 a = b;
                 b = temp + b;
-                
-                // 1 + 1 + 2 + 3 + 5 + 8 + ...
             }
 
             return a;
@@ -37,8 +28,8 @@ namespace fibonacci
         private void button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            
-            for (int i = 0; i < Convert.ToInt32(textBox1.Text); i++)
+
+            for (long i = 0; i < Convert.ToInt64(textBox1.Text); i++)
                 listBox1.Items.Add(Fibonacci(i));
         }
     }
