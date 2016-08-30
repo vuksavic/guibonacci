@@ -27,6 +27,8 @@ namespace fibonacci
                 int temp = a;
                 a = b;
                 b = temp + b;
+                
+                // 1 + 1 + 2 + 3 + 5 + 8 + ...
             }
 
             return a;
