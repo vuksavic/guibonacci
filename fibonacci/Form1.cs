@@ -36,6 +36,8 @@ namespace fibonacci
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            
             for (int i = 0; i < Convert.ToInt32(textBox1.Text); i++)
                 listBox1.Items.Add(Fibonacci(i));
         }
