@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Numerics;
@@ -19,17 +19,16 @@ namespace fibonacci
 
         //public static BigInteger Fibonacci(long n)
         //{
-
         //    BigInteger a = 0;
         //    BigInteger b = 1;
-
+        //
         //    for (long i = 0; i < n; i++)
         //    {
         //        BigInteger temp = a;
         //        a = b;
         //        b = temp + b;
         //    }
-
+        //
         //    return a;
         //}
 
@@ -65,28 +64,21 @@ namespace fibonacci
             try
             {
                 listBox1.Items.Clear();
-
                 int uLimit = int.Parse(textBox1.Text);
-
                 sw.Start();
 
                 List<BigInteger> list = FibonacciList(uLimit);
-
                 sw.Stop();
 
                 foreach (BigInteger f in list) listBox1.Items.Add(f);
-
                 label1.Text = "calculation time: " + sw.Elapsed.TotalMilliseconds + "ms";
             }
 
             catch
             {
-
                 label1.Text = "error";
-
                 MessageBox.Show("error", "please enter how many fibonacci numbers you want to be calculated");
             }
-
         }
     }
 }
